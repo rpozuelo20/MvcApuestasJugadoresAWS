@@ -46,10 +46,32 @@
                         @Html.DisplayFor(modelItem => item.Usuario)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.IdEquipoLocal)
+                        @if (item.IdEquipoLocal == 1)
+                        {
+                            <span>Real Madrid Club de Fútbol</span>
+                        }
+                        else if (item.IdEquipoLocal == 2)
+                        {
+                            <span>Manchester City</span>
+                        }
+                        else
+                        {
+                            <span>Equipo no disponible</span>
+                        }
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.IdEquipoVisitante)
+                        @if (item.IdEquipoVisitante == 1)
+                        {
+                            <span>Real Madrid Club de Fútbol</span>
+                        }
+                        else if (item.IdEquipoLocal == 2)
+                        {
+                            <span>Manchester City</span>
+                        }
+                        else
+                        {
+                            <span>Equipo no disponible</span>
+                        }
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.GolesEquipoLocal)
