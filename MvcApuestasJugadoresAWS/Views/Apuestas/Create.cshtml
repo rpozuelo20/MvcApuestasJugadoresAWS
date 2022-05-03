@@ -1,0 +1,48 @@
+﻿@model MvcApuestasJugadoresAWS.Models.Apuesta
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Crear apuesta</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div class="form-group">
+                <label class="control-label">Usuario</label>
+                <input name="usuario" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">IdEquipoLocal</label>
+                <select name="idequipolocal" class="form-control">
+                    <option value="1">Real Madrid Club de Fútbol</option>
+                    <option value="2">Manchester City</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">IdEquipoVisitante</label>
+                <select name="idequipovisitante" class="form-control">
+                    <option value="1">Real Madrid Club de Fútbol</option>
+                    <option value="2">Manchester City</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">GolesEquipoLocal</label>
+                <input name="golesequipolocal" type="number" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">GolesEquipoVisitante</label>
+                <input name="golesequipovisitante" type="number" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear apuesta" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver</a>
+</div>
